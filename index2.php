@@ -9,7 +9,7 @@ $name = $_REQUEST['file'];
 $handle = fopen($name, "r");
 echo '<table>';
 //displays header row
-if (true) {
+if (TRUE) {
 	$csvcontents = fgetcsv($handle);
 	echo '<tr>';
 	foreach ($csvcontents as $headercolumn) {
@@ -29,6 +29,7 @@ echo '</table>';
 fclose($handle);
 
 /*
+basic way of creating a table
 echo "<html><body><table>\n\n";
 $f = fopen($name, "r");
 while (($line = fgetcsv($f)) !== false) {
